@@ -1,15 +1,19 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    color: #ddd;
     text-align: center;
+    animation: fadeIn 2s ease-in;
 }
 
 header {
-    background-color: #333;
+    background: #1f1c2c;
     color: white;
     padding: 20px;
+    font-size: 24px;
+    animation: slideDown 1.5s ease-in-out;
 }
 #portfolio-image img{
     width:300px;
@@ -23,21 +27,28 @@ header {
 }
 nav ul {
     list-style: none;
-    padding: 0;
-    background: #444;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    background: #161616;
+    animation: fadeIn 2s ease-in;
 }
-
+.paragraph-color{
+    color: #ffcc00;
+}
 nav ul li {
-    display: inline;
-    margin: 10px;
+    margin: 0 15px;
 }
-
 nav ul li a {
     text-decoration: none;
-    color: white;
+    color: #f8f8f8;
     font-weight: bold;
+    transition: color 0.3s ease-in-out;
 }
-
+nav ul li a:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+}
 .listed-items{
     text-align: justify;
 }
@@ -45,10 +56,28 @@ section {
     padding: 20px;
     margin: 10px auto;
     max-width: 800px;
-    background: white;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    background: rgba(41, 4, 4, 0.1);;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    animation: slideUp 1.8s ease-in-out;
 }
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background: #ffcc00;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.btn:hover {
+    background: #ff9900;
+    transform: scale(1.1);
+}
+
 .interest-flexbox{
     display: flex;
     justify-content: center;
@@ -61,23 +90,30 @@ section {
     margin-top: 10px;
 }
 
-form input, form textarea {
-    width: 95%;
+input, textarea {
+    width: 90%;
+    padding: 10px;
     margin: 10px 0;
-    padding: 10px;
-}
-
-button {
-    background: #333;
-    color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-}
-
-footer {
-    margin-top: 20px;
-    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
     background: #222;
     color: white;
+}
+footer {
+    padding: 15px;
+    background: #1f1c2c;
+    color: white;
+    animation: fadeIn 2s ease-in;
+}
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes slideUp {
+    from {transform: translateY(20px); opacity: 0;}
+    to {transform: translateY(0); opacity: 1;}
+}
+@keyframes slideDown {
+    from {transform: translateY(-20px); opacity: 0;}
+    to {transform: translateY(0); opacity: 1;}
 }
