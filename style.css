@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+#portfolio-image img{
+    width:300px;
+    height: 350px;
+}
+.paragraph{
+    text-align: justify;
+    padding: 2px;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    background: #444;
+}
+
+nav ul li {
+    display: inline;
+    margin: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.listed-items{
+    text-align: justify;
+}
+section {
+    padding: 20px;
+    margin: 10px auto;
+    max-width: 800px;
+    background: white;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.interest-flexbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+.project {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+form input, form textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+button {
+    background: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background: #222;
+    color: white;
+}
